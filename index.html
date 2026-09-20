@@ -1,86 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>yoshikawakz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yoshikawa Kazunobu | Portfolio</title>
+    <meta name="description" content="Yoshikawa Kazunobuのポートフォリオサイト。自己紹介、個人開発アプリ「ねこロジック - 箱に入りたい！」、経歴を掲載しています。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
-<main>
-    <h1>Yoshikawak'z Portfolio</h1>
-</main>
 
-<ul class="nav nav-pills">
-    <li class="active"><a href="#selfIntroduction" data-toggle="pill">自己紹介</a></li>
-    <li><a href="#faborites" data-toggle="pill">好きなこと</a></li>
-    <li><a href="#weakpoints" data-toggle="pill">苦手なこと</a></li>
-    <li><a href="#resume" data-toggle="pill">履歴書</a></li>
-    <li><a href="http://blog.kazunobu.info">Blog</a></li>
-</ul>
-
-<div class="tab-content">
-    <div class="tab-pane active" id="selfIntroduction">
-        <h2>自己紹介</h2>
-        <p>こんにちは。SI業界で働いています。東京在住です。</p>
-    </div>
-    <div class="tab-pane" id="faborites">
-        <h2>好きなこと</h2>
-        <h3>IT技術</h3>
-        <ul>
-            <li>Gradle</li>
-            <li>Jenkins</li>
-            <li>Git</li>
-        </ul>
-        <h3>ゲーム</h3>
-        <ul>
-            <li>Fate/Grand Order</li>
+<header class="site-header">
+    <div class="wrap">
+        <a href="#top" class="logo">yoshikawa<span class="dot">.</span>kz</a>
+        <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">&#9776;</button>
+        <ul class="site-nav">
+            <li><a href="#about">自己紹介</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#resume">履歴書</a></li>
         </ul>
     </div>
-    <div class="tab-pane" id="weakpoints">
-        <h2>苦手なこと</h2>
-    </div>
-    <div class="tab-pane" id="resume">
-        <h2>履歴書</h2>
-        <table class="table table-striped">
-            <tr>
-                <th>年月</th>
-                <th>イベント</th>
-                <th>詳細</th>
-            </tr>
-            <tr>
-                <td>2018年2月</td>
-                <td>情報セキュリティ会社の開発部門に出向</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2013年7月</td>
-                <td>公共・金融系の技術支援部隊に異動</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2009年6月</td>
-                <td>研修を経て、ヘルケア系システムの開発職に着く</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2009年4月</td>
-                <td>大手システムインテグレータ入社</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2009年3月</td>
-                <td>都内の私立大学大学院修了（工学修士）</td>
-                <td></td>
-            </tr>
-        </table>
+</header>
+
+<div class="hero" id="top">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Yoshikawa Kazunobu</h1>
+    <p class="lead">SI業界で働いているソフトウェアエンジニアです。東京在住。個人開発でiOSアプリ「ねこロジック - 箱に入りたい！」をリリースしました。</p>
+    <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">Works を見る</a>
+        <a href="#resume" class="btn btn-ghost">履歴書を見る</a>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+
+<main>
+    <section id="about">
+        <div class="section-head">
+            <span class="section-num">01</span>
+            <h2>自己紹介</h2>
+        </div>
+        <p>こんにちは。SI業界で働いています。東京在住です。</p>
+
+        <h3>好きなこと</h3>
+        <div class="tag-group">
+            <span class="tag-label">IT技術</span>
+            <ul class="tags">
+                <li>Gradle</li>
+                <li>Jenkins</li>
+                <li>Git</li>
+            </ul>
+        </div>
+        <div class="tag-group">
+            <span class="tag-label">ゲーム</span>
+            <ul class="tags">
+                <li>Fate/Grand Order</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>Works</h2>
+        </div>
+        <div class="work-card">
+            <div class="work-icon" aria-hidden="true">&#128008;&#128230;</div>
+            <div class="work-body">
+                <div class="work-title-row">
+                    <h3>ねこロジック - 箱に入りたい！</h3>
+                    <span class="badge">iOS ・ 審査中</span>
+                </div>
+                <p>箱に入りたがるねこたちを導いて解く、ロジックパズルゲームです。</p>
+                <div class="work-links">
+                    <a href="apps/neko-logic-boxes/support/">サポート</a>
+                    <a href="apps/neko-logic-boxes/privacy/">プライバシーポリシー</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-head">
+            <span class="section-num">03</span>
+            <h2>履歴書</h2>
+        </div>
+        <ul class="timeline">
+            <li>
+                <time>2018年2月</time>
+                <div class="event">情報セキュリティ会社の開発部門に出向</div>
+            </li>
+            <li>
+                <time>2013年7月</time>
+                <div class="event">公共・金融系の技術支援部隊に異動</div>
+            </li>
+            <li>
+                <time>2009年6月</time>
+                <div class="event">研修を経て、ヘルケア系システムの開発職に着く</div>
+            </li>
+            <li>
+                <time>2009年4月</time>
+                <div class="event">大手システムインテグレータ入社</div>
+            </li>
+            <li>
+                <time>2009年3月</time>
+                <div class="event">都内の私立大学大学院修了（工学修士）</div>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 yoshikawakz</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
-<footer>&copy; 2018 yoshikawakz</footer>
 </html>
