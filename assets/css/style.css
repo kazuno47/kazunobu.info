@@ -395,30 +395,32 @@ section.panel.is-visible {
 
 /* Mobile */
 @media (max-width: 640px) {
+    /* Base (no-JS) fallback: the nav sits in normal flow as a plain,
+       always-visible, always-focusable stacked list, so the header has to
+       wrap and grow to fit it instead of clipping it at 64px. Once
+       main.js confirms JS is running (html.js), the nav switches to a
+       fixed-position overlay that doesn't affect header height, so the
+       header goes back to its fixed-height row layout. */
     .site-header .wrap {
         max-width: none;
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    html.js .site-header .wrap {
+        flex-wrap: nowrap;
+        height: 64px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .site-nav {
-        position: fixed;
-        top: 64px;
-        left: 0;
-        right: 0;
         flex-direction: column;
-        background: var(--bg-elevated);
-        border-bottom: 1px solid var(--border);
-        padding: 8px;
+        flex-basis: 100%;
         gap: 2px;
-        transform: translateY(-8px);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.15s ease, transform 0.15s ease;
-    }
-
-    .site-nav.is-open {
-        transform: none;
-        opacity: 1;
-        pointer-events: auto;
+        margin-top: 12px;
     }
 
     .site-nav a {
@@ -426,7 +428,30 @@ section.panel.is-visible {
         padding: 10px 14px;
     }
 
-    .nav-toggle {
+    html.js .site-nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        background: var(--bg-elevated);
+        border-bottom: 1px solid var(--border);
+        padding: 8px;
+        transform: translateY(-8px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    html.js .site-nav.is-open {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* The toggle button is only useful once JS can drive it; without JS
+       the nav is already fully visible, so keep the button out of the way. */
+    html.js .nav-toggle {
         display: inline-flex;
         align-items: center;
         justify-content: center;
