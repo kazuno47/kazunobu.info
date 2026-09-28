@@ -339,6 +339,7 @@ section.panel.is-visible {
 .discipline-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
     gap: 16px;
     margin-bottom: 32px;
 }
@@ -367,6 +368,35 @@ section.panel.is-visible {
     color: var(--accent);
     border-color: rgba(94, 234, 212, 0.35);
     background: rgba(94, 234, 212, 0.1);
+}
+
+.belt-history {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 12px 0 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.belt-history li {
+    display: flex;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.belt-history time {
+    flex-shrink: 0;
+    width: 118px;
+    font-family: monospace;
+    white-space: nowrap;
+}
+
+.belt-history li:last-child {
+    color: var(--accent);
+    font-weight: 600;
 }
 
 .result-badge {
