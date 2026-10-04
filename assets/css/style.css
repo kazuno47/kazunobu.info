@@ -143,9 +143,9 @@ a:hover {
 
 .hero-photo {
     flex-shrink: 0;
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    border-radius: 28px;
     object-fit: cover;
     border: 2px solid rgba(94, 234, 212, 0.35);
     box-shadow: 0 0 0 8px rgba(94, 234, 212, 0.08), var(--shadow);
@@ -619,8 +619,9 @@ section.panel.is-visible {
 
     .hero-photo {
         order: -1;
-        width: 128px;
-        height: 128px;
+        width: 140px;
+        height: 140px;
+        border-radius: 20px;
     }
 
     .work-card {
