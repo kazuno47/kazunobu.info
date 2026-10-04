@@ -144,7 +144,8 @@ a:hover {
 .hero-photo {
     flex-shrink: 0;
     width: 260px;
-    height: 260px;
+    height: auto;
+    aspect-ratio: 522 / 560;
     border-radius: 28px;
     object-fit: cover;
     border: 2px solid rgba(94, 234, 212, 0.35);
@@ -620,7 +621,6 @@ section.panel.is-visible {
     .hero-photo {
         order: -1;
         width: 140px;
-        height: 140px;
         border-radius: 20px;
     }
 
