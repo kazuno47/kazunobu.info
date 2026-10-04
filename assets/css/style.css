@@ -130,6 +130,27 @@ a:hover {
     padding: 96px 24px 64px;
 }
 
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.hero-text {
+    min-width: 0;
+}
+
+.hero-photo {
+    flex-shrink: 0;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(94, 234, 212, 0.35);
+    box-shadow: 0 0 0 8px rgba(94, 234, 212, 0.08), var(--shadow);
+}
+
 .eyebrow {
     color: var(--accent);
     font-size: 0.85rem;
@@ -588,6 +609,18 @@ section.panel.is-visible {
 
     .hero {
         padding: 72px 24px 48px;
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .hero-photo {
+        order: -1;
+        width: 128px;
+        height: 128px;
     }
 
     .work-card {
