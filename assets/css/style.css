@@ -306,6 +306,10 @@ section.panel.is-visible {
     box-shadow: var(--shadow);
 }
 
+.work-card + .work-card {
+    margin-top: 20px;
+}
+
 .work-icon {
     flex-shrink: 0;
     width: 72px;
