@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Usage Status | KAZUNOBU.INFO</title>
+    <meta name="description" content="Cursor / VS CodeでCodex・Claude・Antigravityの利用可能枠を確認できる、オープンソースの拡張機能「AI Usage Status」。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap">
+        <a href="/" class="logo">KAZUNOBU<span class="dot">.</span>INFO</a>
+        <ul class="site-nav">
+            <li><a href="/#works">Worksへ戻る</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="hero">
+    <p class="eyebrow">Open Source / VS Code Extension</p>
+    <h1>AI Usage Status</h1>
+    <p class="lead">Cursor / VS CodeのExplorer ViewとStatus Barに、Codex・Claude・Antigravityの利用可能枠を表示するオープンソース拡張機能です。</p>
+    <div class="hero-actions">
+        <a href="https://github.com/kazuno47/ai-usage-status" class="btn btn-primary" target="_blank" rel="noopener">GitHubで見る</a>
+        <a href="#about" class="btn btn-ghost">詳しく見る</a>
+    </div>
+</div>
+
+<main>
+    <section id="about">
+        <div class="section-head">
+            <span class="section-num">01</span>
+            <h2>概要</h2>
+        </div>
+        <p>ローカルのCodexBar CLIが出力するJSONを読み取り、AIサービスごとの利用可能枠をエディター内に見やすく表示します。拡張機能自身はHTTPサーバー、外部API、認証情報へアクセスしません。</p>
+        <div class="tag-group">
+            <span class="tag-label">対応エディター</span>
+            <ul class="tags">
+                <li>Cursor</li>
+                <li>Visual Studio Code</li>
+            </ul>
+        </div>
+        <div class="tag-group">
+            <span class="tag-label">対応サービス</span>
+            <ul class="tags">
+                <li>Codex</li>
+                <li>Claude</li>
+                <li>Antigravity</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>できること</h2>
+        </div>
+        <ul class="tags">
+            <li>Explorerの専用ビューで主要quotaを一覧表示</li>
+            <li>Status Barで残量をコンパクトに確認</li>
+            <li>Providerごとの全window・リセット日時をQuickPickで表示</li>
+            <li>60秒ごとの自動更新</li>
+            <li>外部API・認証情報へアクセスしないローカル完結の設計</li>
+        </ul>
+    </section>
+
+    <section id="setup">
+        <div class="section-head">
+            <span class="section-num">03</span>
+            <h2>利用方法</h2>
+        </div>
+        <p>Node.js 20以降、CursorまたはVS Code 1.85以降、そしてCodexBar CLIのインストール・設定が必要です。<code>codexbar dashboard --identity redacted</code> を実行できる環境で利用できます。</p>
+        <p>リポジトリを取得後、<code>npm install</code>、<code>npm run build</code>、<code>npx @vscode/vsce package</code> を順に実行してVSIXを作成し、エディターの「Install from VSIX...」からインストールします。詳しい手順はGitHubリポジトリをご覧ください。</p>
+    </section>
+
+    <section id="links">
+        <div class="section-head">
+            <span class="section-num">04</span>
+            <h2>リンク</h2>
+        </div>
+        <div class="work-links">
+            <a href="https://github.com/kazuno47/ai-usage-status" target="_blank" rel="noopener">GitHub Repository</a>
+            <a href="https://github.com/kazuno47/ai-usage-status/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 kazunobu yoshikawa</p>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
